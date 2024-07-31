@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --texto-principal: "Quicksand", sans-serif;
+    --texto-secundario: "Inter", sans-serif;
+    --texto-terciario: "Roboto Flex", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    font-family: var(--texto-principal);
+    font-size: 1rem;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: var(--texto-secundario);
+}
+
+h4 {
+    font-family: var(--texto-terciario);
+}
+
+body {
+    background-image: var(--bs-gradient);
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 70px;
+    background: linear-gradient(to right, #0A077D, #554ff5);
+    height: 15vh;
+    width: 100vw;
+
+}
+
+.menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    gap: 15px;
+}
+
+.nombre-superior {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    color: #A5DBE1;
+}
+
+.logo-principal {
+    width: 60px;
+    height: 60px;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.enlaces nav a {
+    font-weight: 900;
+    color: #cc8a05;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+.enlaces nav a:hover {
+    background-color: #0A077D;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.abrir-enlaces {
+    display: none;
+}
+
+.bi-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CA9321;
+    font-size: 1.7rem;
+}
+
+/* SECTION 1 */
+.presentacion {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px 50px;
+}
+
+.carta-de-presentacion {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.carta-de-presentacion div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.name1 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: black;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: black;
+    text-shadow: 2px 2px #388E8B;
+}
+
+.presentacion1 {
+    font-size: 1.12rem;
+    color: black;
+    text-align: center;
+
+}
+
+.enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bi-instagram {
+    color: #CA9321;
+    font-size: 1.5rem;
+}
+
+.bi-whatsapp {
+    color: #CA9321;
+    font-size: 1.5rem;
+}
+
+.bi-github {
+    color: #CA9321;
+    font-size: 1.5rem;
+}
+
+.img {
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px lightblue;
+    position: relative;
+}
+
+.foto {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: #CA9321;
+}
+
+.logo {
+    height: 50%;
+    width: 60%;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: #0A077D;
+    box-shadow: 5px 10px 10px #0A077D;
+    position: absolute;
+    right: 200px;
+    top: 5%;
+}
+
+/* SECTION 2 */
+
+
+.certificados {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+
+
+/* SECTION 3 */
+.title-experiencia {
+    display: flex;
+    justify-content: center;
+    background-color: #4ba5a2;
+}
+
+.title-experiencia h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.9rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.experiencia {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px 30px 10px 30px;
+    background: linear-gradient(to left, #4ba5a2, #d9f6f5);
+}
+
+.trabajos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.cursos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.cursos h3 {
+    display: flex;
+    justify-content: center;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #388E8B, #daf5f4);
+}
+
+.title-contacto {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.9rem;
+}
+
+.title-contacto h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 550px;
+    gap: 25px
+}
+
+input {
+    border: 2px solid #388E8B;
+    font-family: var(--texto-terciario);
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+::placeholder {
+    font-family: var(--texto-terciario);
+    padding-left: 5px;
+}
+
+textarea {
+    border: 2px solid #388E8B;
+    padding-left: 10px;
+    font-family: var(--texto-terciario);
+}
+
+ form button {
+    background-color: #388E8B;
+    border-radius: 10px;
+    box-shadow: 8px 0px 8px 0 #0A077D;
+
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #f6b83b, #f6ddaa);
+    gap: 1.5rem;
+    font-size: 0.5rem;
+    height: 8vh;
+}
+
+footer label {
+    font-family: var(--texto-terciario);
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.logo-footer img {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-footer label {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.ubicacion-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.ubicacion-footer label {
+    font-size: 0.7rem;
+}
+
+.bi-geo-fill {
+    font-size: 0.75rem;
+}
+
+.telefono-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.telefono-footer label {
+    font-size: 0.7rem;
+}
+
+.bi-telephone {
+    font-size: 0.75rem;
+}
+
+.create-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.create-footer label {
+    font-size: 0.7rem;
+}
+
+.bi-c-circle {
+    font-size: 0.75rem;
+}
+
+/* MEDIAS QUERIES */
+
+@media screen and (max-width: 900px) {
+    .enlaces nav {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #0A077D, #554ff5);
+        position: fixed;
+        left: 0;
+        top: 15vh;
+        width: 100%;
+    }
+
+    .abrir-enlaces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+    }
+
+    .presentacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .educacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experiencia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    .logo-footer img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+
+    header {
+        height: 8vh;
+    }
+
+    .logo-principal {
+        width: 32px;
+        height: 32px;
+    }
+
+    .img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .logo {
+        height: 40%;
+        width: 50%;
+        right: 175px;
+        top: 5%;
+    }
+
+    .formulario {
+        width: 300px;
+        height: 450px;
+        gap: 15px
+    }
+}
+
+@media screen and (max-width: 545px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    .logo-footer img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo-footer label {
+        font-size: 0.4rem;
+    }
+
+    .ubicacion-footer label {
+        font-size: 0.4rem;
+    }
+
+    .bi-geo-fill {
+        font-size: 0.6rem;
+    }
+
+    .telefono-footer label {
+        font-size: 0.4rem;
+    }
+
+    .bi-telephone {
+        font-size: 0.6rem;
+    }
+
+    .create-footer label {
+        font-size: 0.4rem;
+    }
+
+    .bi-c-circle {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .img {
+        width: 175px;
+        height: 225px;
+    }
+
+    .logo {
+        height: 40%;
+        width: 50%;
+        right: 150px;
+        top: 5%;
+    }
+
+    .formulario {
+        width: 250px;
+        height: 400px;
+        gap: 10px
+    }
+
+    .logo-footer img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .logo-footer label {
+        font-size: 0.3rem;
+    }
+
+    .ubicacion-footer label {
+        font-size: 0.3rem;
+    }
+
+    .bi-geo-fill {
+        font-size: 0.5rem;
+    }
+
+    .telefono-footer label {
+        font-size: 0.3rem;
+    }
+
+    .bi-telephone {
+        font-size: 0.5rem;
+    }
+
+    .create-footer label {
+        font-size: 0.3rem;
+    }
+
+    .bi-c-circle {
+        font-size: 0.5rem;
+    }
+}
+

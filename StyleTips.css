@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --texto-principal: "Quicksand", sans-serif;
+    --texto-secundario: "Inter", sans-serif;
+    --texto-terciario: "Roboto Flex", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    font-family: var(--texto-principal);
+    font-size: 1rem;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: var(--texto-secundario);
+}
+
+h4 {
+    font-family: var(--texto-terciario);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 70px;
+    background: linear-gradient(to right, #0A077D, #554ff5);
+    height: 15vh;
+    width: 100vw;
+
+}
+
+.menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    gap: 15px;
+}
+
+.nombre-superior {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    color: #A5DBE1;
+}
+
+.logo-principal {
+    width: 60px;
+    height: 60px;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.enlaces nav a {
+    font-weight: 900;
+    color: #cc8a05;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+.enlaces nav a:hover {
+    background-color: #0A077D;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.abrir-enlaces {
+    display: none;
+}
+
+.bi-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CA9321;
+    font-size: 1.7rem;
+
+}
+
+/* PORTADA */
+.portada {
+    display: flex;
+    height: 200px;
+    position: relative;
+}
+
+.img-portada {
+    width: 100%;
+    opacity: 0.3;
+}
+
+.text-portada {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    text-align: center;
+    font-size: 4.4rem;
+    font-weight: 900;
+    text-shadow: 4px 4px #A5DBE1;
+}
+
+.abrir-enlaces {
+    display: none;
+}
+
+.bi-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CA9321;
+    font-size: 1.7rem;
+
+}
+
+.cajas {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #f6b83b, #f6ddaa);
+    gap: 1.5rem;
+    font-size: 0.5rem;
+    height: 5vh;
+}
+
+footer label {
+    font-family: var(--texto-terciario);
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.logo-footer img {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-footer label {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.ubicacion-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.ubicacion-footer label {
+    font-size: 0.7rem;
+}
+
+.bi-geo-fill {
+    font-size: 0.75rem;
+}
+
+.telefono-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.telefono-footer label {
+    font-size: 0.7rem;
+}
+
+.bi-telephone {
+    font-size: 0.75rem;
+}
+
+.create-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.create-footer label {
+    font-size: 0.7rem;
+}
+
+.bi-c-circle {
+    font-size: 0.75rem;
+}
+
+/* MEDIAS QUERIES */
+
+
+@media screen and (max-width: 900px) {
+    .enlaces nav {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #0A077D, #554ff5);
+        position: fixed;
+        left: 0;
+        top: 15vh;
+        width: 100%;
+
+    }
+
+    .abrir-enlaces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    .logo-footer img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .text-portada {
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+
+    header {
+        height: 8vh;
+    }
+
+    .logo-principal {
+        width: 32px;
+        height: 32px;
+    }
+
+    .portada {
+        height: 150px;
+    }
+
+    .text-portada {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 545px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    .text-portada {
+        font-size: 2.5rem;
+    }
+
+    .logo-footer img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo-footer label {
+        font-size: 0.4rem;
+    }
+
+    .ubicacion-footer label {
+        font-size: 0.4rem;
+    }
+
+    .bi-geo-fill {
+        font-size: 0.6rem;
+    }
+
+    .telefono-footer label {
+        font-size: 0.4rem;
+    }
+
+    .bi-telephone {
+        font-size: 0.6rem;
+    }
+
+    .create-footer label {
+        font-size: 0.4rem;
+    }
+
+    .bi-c-circle {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .portada {
+        height: 100px;
+    }
+
+    .text-portada {
+        font-size: 2rem;
+    }
+
+    .logo-footer img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .logo-footer label {
+        font-size: 0.3rem;
+    }
+
+    .ubicacion-footer label {
+        font-size: 0.3rem;
+    }
+
+    .bi-geo-fill {
+        font-size: 0.5rem;
+    }
+
+    .telefono-footer label {
+        font-size: 0.3rem;
+    }
+
+    .bi-telephone {
+        font-size: 0.5rem;
+    }
+
+    .create-footer label {
+        font-size: 0.3rem;
+    }
+
+    .bi-c-circle {
+        font-size: 0.5rem;
+    }
+
+}
