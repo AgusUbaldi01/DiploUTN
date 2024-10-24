@@ -9,29 +9,30 @@
 </head>
 <body>
     <header>
-        <div class="nombre-superior">
-            <img src="./images/LogoByN.png" alt="AU-soluciones" class="logo-principal">
-            <h4>AU Soluciones Tecnológicas</h4>
-        </div>
-        <div class="enlaces">
-            <button class="abrir-enlaces">
-                <i class="bi bi-list"></i>
+        <img src="./images/LogoByN.png" alt="AU-soluciones" class="logo-principal">
+        <button class="abrir-enlaces" id="abrir">
+            <i class="bi bi-list"></i>
+        </button>
+        <nav class="nav" id="nav"> 
+            <button class="cerrar-enlaces" id="cerrar">
+                <i class="bi bi-x"></i>
             </button>
-            <nav>
-                <ul class="menu">
-                    <li class="menu-lista">
-                        <a href="./index.html">Inicio</a>
-                    </li>
-                    <li class="menu-lista">
-                        <a href="./Serv.html">Servicios</a>
-                    </li>
-                    <li class="menu-lista">
-                        <a href="./Tips.html">Tips</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+            <ul class="menu">
+                <li class="menu-lista">
+                    <a href="./index.html">Inicio</a>
+                </li>
+                <li class="menu-lista">
+                    <a href="./Serv.html">Servicios</a>
+                </li>
+                <li class="menu-lista">
+                    <a href="./Tips.html">Tips</a>
+                </li>
+                <li class="menu-lista">
+                    <a href="./Galery.html">Galería</a>
+                </li>
+            </ul>
+        </nav>
+</header>
     <div class="portada">
         <img src="./images/Soportetécnico.webp" alt="Servicio-tecnico" class="img-portada">
         <h2 class="text-portada">SERVICIO TÉCNICO INFORMÁTICO</h2>
@@ -63,7 +64,7 @@
             <input type="email" placeholder="Email">
             <input type="number" placeholder="Teléfono">
             <textarea name="Consulta" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-            <button type="submit">Enviar</button>
+            <button class="enviar" type="submit">Enviar</button>
         </div>
     </form>
     <footer>
@@ -75,5 +76,6 @@
         <div class="create-footer"><i class="bi bi-c-circle"></i><label for="">Agustín A. Ubaldi 2024</label></div>
     </footer>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -35,41 +35,28 @@ body {
 /* HEADER */
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 5px 70px;
+    padding: 5px 50px;
     background: linear-gradient(to right, #0A077D, #554ff5);
-    height: 15vh;
-    width: 100vw;
-
+  
 }
 
 .menu {
     display: flex;
-    margin-right: 40px;
     list-style: none;
-    gap: 15px;
+    gap: 1rem;
 }
 
-.nombre-superior {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    color: #A5DBE1;
-}
+
 
 .logo-principal {
     width: 60px;
     height: 60px;
 }
 
-.enlaces {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
 
-.enlaces nav a {
+.nav a {
     font-weight: 900;
     color: #cc8a05;
     text-decoration: none;
@@ -77,7 +64,7 @@ header {
     border-radius: 3px;
 }
 
-.enlaces nav a:hover {
+.nav a:hover {
     background-color: #0A077D;
     opacity: 0.9;
     transition: 0.5s;
@@ -95,6 +82,18 @@ header {
     font-size: 1.7rem;
 }
 
+.cerrar-enlaces{
+    display: none;
+}
+
+.bi-x {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    color: #CA9321;
+    font-size: 1.7rem;
+}
 /* SECTION 1 */
 .presentacion {
     display: flex;
@@ -385,21 +384,49 @@ footer label {
 }
 
 /* MEDIAS QUERIES */
-
-@media screen and (max-width: 900px) {
-    .enlaces nav {
-        display: none;
+@media screen and (max-width: 700px) {
+  
+    .abrir-enlaces,
+    .cerrar-enlaces{
+        display: block;
     }
 
-    .menu {
+    .bi-x {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        color: #CA9321;
+        font-size: 1.7rem;
+        background-color: black;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
         display: flex;
         flex-direction: column;
-        background: linear-gradient(to right, #0A077D, #554ff5);
-        position: fixed;
-        left: 0;
-        top: 15vh;
-        width: 100%;
+        align-items: end;
+        position: absolute;
+        gap: 1rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        background: linear-gradient(to top, #0A077D, #554ff5);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5 );
     }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+
 
     .abrir-enlaces {
         display: flex;
@@ -410,6 +437,20 @@ footer label {
         width: 30px;
         height: 30px;
     }
+
+  
+    html {
+        font-size: 10px;
+    }
+
+    .logo-footer img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
 
     .presentacion {
         display: flex;

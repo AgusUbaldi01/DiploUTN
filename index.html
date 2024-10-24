@@ -9,30 +9,31 @@
 </head>
 <body>
     <body>
-        <header>
-            <div class="nombre-superior">
-                <img src="./images/LogoByN.png" alt="AU-soluciones" class="logo-principal">
-                <h4>AU Soluciones Tecnológicas</h4>
-            </div>
-            <div class="enlaces">
-                <button class="abrir-enlaces">
-                    <i class="bi bi-list"></i>
-                </button>
-                <nav>
-                    <ul class="menu">
-                        <li class="menu-lista">
-                            <a href="./index.html">Inicio</a>
-                        </li>
-                        <li class="menu-lista">
-                            <a href="./Serv.html">Servicios</a>
-                        </li>
-                        <li class="menu-lista">
-                            <a href="./Tips.html">Tips</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+      <header>
+        <img src="./images/LogoByN.png" alt="AU-soluciones" class="logo-principal">
+        <button class="abrir-enlaces" id="abrir">
+            <i class="bi bi-list"></i>
+        </button>
+        <nav class="nav" id="nav"> 
+            <button class="cerrar-enlaces" id="cerrar">
+                <i class="bi bi-x"></i>
+            </button>
+            <ul class="menu">
+                <li class="menu-lista">
+                    <a href="./index.html">Inicio</a>
+                </li>
+                <li class="menu-lista">
+                    <a href="./Serv.html">Servicios</a>
+                </li>
+                <li class="menu-lista">
+                    <a href="./Tips.html">Tips</a>
+                </li>
+                <li class="menu-lista">
+                    <a href="./Galery.html">Galería</a>
+                </li>
+            </ul>
+        </nav>
+</header>
         <section class="presentacion">
             <div class="carta-de-presentacion">
                 <h2 class="name1">Mi nombre es</h2>
@@ -231,5 +232,6 @@
             <div class="create-footer"><i class="bi bi-c-circle"></i><label for="">Agustín A. Ubaldi 2024</label></div>
         </footer>  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+        <script src="main.js"></script>
+      </body>
 </html>

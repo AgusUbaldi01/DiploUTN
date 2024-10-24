@@ -29,7 +29,9 @@ h4 {
     font-family: var(--texto-terciario);
 }
 
-
+body {
+    background-image: var(--bs-gradient);
+}
 /* HEADER */
 header {
     display: flex;
@@ -93,49 +95,37 @@ header {
     font-size: 1.7rem;
 }
 
-/* PORTADA */
-.portada {
+/* CAJAS DE GALERÍA */
+
+.caja-equipos-ingresados{
     display: flex;
-    height: 200px;
-}
-
-.img-portada {
-    position: relative;
-    width: 100%;
-    opacity: 0.3;
-    z-index: 1;
-}
-
-.text-portada {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    top: 25%;
-    text-align: center;
-    font-size: 4.4rem;
-    font-weight: 900;
-    text-shadow: 4px 4px #A5DBE1;
-}
-
-.abrir-enlaces {
-    display: none;
-}
-
-.bi-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #CA9321;
-    font-size: 1.7rem;
-
-}
-
-.cajas {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    max-width: auto;
+    max-height: auto;
+    gap: 15px;
 }
 
+.caja-equipos-retirados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: auto;
+    max-height: auto;
+    gap: 15px;
+}
+.titulo-galeria{
+   display: flex;
+   justify-content: center; 
+   background-color: #A5DBE1;
+   margin: 5px;
+
+}
+.equipos-ingresados img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 /* FOOTER */
 footer {
@@ -146,6 +136,7 @@ footer {
     gap: 1.5rem;
     font-size: 0.5rem;
     height: 8vh;
+    margin-top: 10px;
 }
 
 footer label {
@@ -245,15 +236,13 @@ footer label {
         right: 0;
         bottom: 0;
         padding: 2rem;
-        background: linear-gradient(to bottom, #0A077D, #554ff5);
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .7 );
+        background: linear-gradient(to top, #0A077D, #554ff5);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5 );
     }
 
     .nav.visible {
         opacity: 1;
         visibility: visible;
-        position: absolute; 
-        z-index: 3;
     }
     
     .menu{
@@ -284,24 +273,6 @@ footer label {
 }
 
 
-
-@media screen and (max-width: 900px) {
-    
-    html {
-        font-size: 10px;
-    }
-
-    .logo-footer img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .text-portada {
-        font-size: 3rem;
-    }
-}
-
-
 @media screen and (max-width: 600px) {
     html {
         font-size: 10px;
@@ -316,12 +287,31 @@ footer label {
         height: 32px;
     }
 
-    .portada {
-        height: 150px;
+    .img {
+        width: 200px;
+        height: 250px;
     }
 
-    .text-portada {
-        font-size: 3rem;
+    .logo {
+        height: 40%;
+        width: 50%;
+        right: 175px;
+        top: 5%;
+    }
+
+    .formulario {
+        width: 300px;
+        height: 450px;
+        gap: 15px
+    }
+    
+    .caja-equipos-ingresados img {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+    .caja-equipos-retirados img {
+        width: 12.5rem;
+        height: 12.5rem;
     }
 }
 
@@ -329,10 +319,6 @@ footer label {
 
     html {
         font-size: 10px;
-    }
-
-    .text-portada {
-        font-size: 2.5rem;
     }
 
     .logo-footer img {
@@ -367,17 +353,26 @@ footer label {
     .bi-c-circle {
         font-size: 0.6rem;
     }
-
 }
 
 @media screen and (max-width: 375px) {
 
-    .portada {
-        height: 100px;
+    .img {
+        width: 175px;
+        height: 225px;
     }
 
-    .text-portada {
-        font-size: 2rem;
+    .logo {
+        height: 40%;
+        width: 50%;
+        right: 150px;
+        top: 5%;
+    }
+
+    .formulario {
+        width: 250px;
+        height: 400px;
+        gap: 10px
     }
 
     .logo-footer img {
@@ -412,5 +407,5 @@ footer label {
     .bi-c-circle {
         font-size: 0.5rem;
     }
-
 }
+

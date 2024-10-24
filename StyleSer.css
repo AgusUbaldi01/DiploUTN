@@ -32,40 +32,28 @@ h4 {
 /* HEADER */
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 5px 70px;
-    background: linear-gradient(to right, #0A077D, #554ff5);
-    height: 15vh;
-    width: 100vw;
-
-}
-.menu{
-    display: flex;
-    margin-right: 40px;
-    list-style: none;
-    gap: 15px;
-}
-
-.nombre-superior {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    gap: 15px;
-    color: #A5DBE1;
+    justify-content: space-between;
+    padding: 5px 50px;
+    background: linear-gradient(to right, #0A077D, #554ff5);
+  
 }
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+
 
 .logo-principal {
     width: 60px;
     height: 60px;
 }
 
-.enlaces {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
 
-.enlaces nav a {
+.nav a {
     font-weight: 900;
     color: #cc8a05;
     text-decoration: none;
@@ -73,7 +61,7 @@ header {
     border-radius: 3px;
 }
 
-.enlaces nav a:hover {
+.nav a:hover {
     background-color: #0A077D;
     opacity: 0.9;
     transition: 0.5s;
@@ -83,21 +71,33 @@ header {
     display: none;
 }
 
-.bi-list{
+.bi-list {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #CA9321;
     font-size: 1.7rem;
-
 }
 
+.cerrar-enlaces{
+    display: none;
+}
+
+.bi-x {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    color: #CA9321;
+    font-size: 1.7rem;
+}
 
 /* PORTADA 976x300 */
 .portada {
     display: flex;
     height: 300px;
     position: relative;
+    z-index: 1;
 }
 
 .img-portada {
@@ -107,6 +107,7 @@ header {
 
 .text-portada {
     position: absolute;
+    z-index: 2;
     top: 50%;
     width: 100%;
     text-align: center;
@@ -200,11 +201,10 @@ textarea {
     font-family: var(--texto-terciario);
 }
 
-button {
+.enviar {
     background-color: #388E8B;
     border-radius: 10px;
     box-shadow: 8px 0px 8px 0 #0A077D;
-
 }
 
 /* FOOTER */
@@ -215,7 +215,7 @@ footer {
     background: linear-gradient(to right, #f6b83b, #f6ddaa);
     gap: 1.5rem;
     font-size: 0.5rem;
-    height: 5vh;
+    height: 8vh;
 }
 
 footer label {
@@ -226,7 +226,6 @@ footer label {
     display: flex;
     justify-content: center;
     gap: 5px;
-
 }
 
 .logo-footer img {
@@ -286,21 +285,51 @@ footer label {
 }
 
 /* MEDIAS QUERIES */
-
-@media screen and (max-width: 900px) {
-    .enlaces nav{
-        display: none;
+@media screen and (max-width: 700px) {
+  
+    .abrir-enlaces,
+    .cerrar-enlaces{
+        display: block;
     }
+
+    .bi-x {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        color: #CA9321;
+        font-size: 1.7rem;
+        background-color: black;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        gap: 1rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        background: linear-gradient(to top, #0A077D, #554ff5);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5 );
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        z-index: 3;
+    }
+    
     .menu{
         display: flex;
         flex-direction: column;
-        background: linear-gradient(to right, #0A077D, #554ff5);
-        position: fixed;
-        left: 0;
-        top: 15vh;
-        width: 100%;
-
     }
+
+
     .abrir-enlaces {
         display: flex;
         justify-content: center;
@@ -310,6 +339,21 @@ footer label {
         width: 30px;
         height: 30px;
     }
+
+  
+    html {
+        font-size: 10px;
+    }
+
+    .logo-footer img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+   
 
     .cajas{
         display: flex;
