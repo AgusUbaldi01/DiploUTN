@@ -121,6 +121,7 @@ header {
     justify-content: center;
     gap: 40px;
     padding: 30px 30px;
+    background: linear-gradient(to right, #388E8B, #daf5f4);
 }
 
 .caja {
@@ -153,9 +154,97 @@ h2.caja-title {
     text-align: center;
     margin: 0 20px 0 20px;
 }
+/* COMENTARIOS DE CLIENTES */
+
+.caja-form-tarjeta h3{
+    display: flex;
+    justify-content: center;
+    font-family: var(--texto-principal);
+    font-size: 1.5rem;
+    font-weight: 900; 
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.caja-form-tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #388E8B, #daf5f4);
+}
+.caja-form-tarjeta label {
+    font-family: var(--texto-principal);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.caja-form-tarjeta button {
+    background-color: #388E8B;
+    border-radius: 10px;
+    font-family: var(--texto-principal);
+}
+
+.caja-form-tarjeta input{
+    border-color: #0A077D;
+    border-radius: 10px;
+
+}
+.caja-form-tarjeta form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+}
+.caja-form-tarjeta input:hover{
+    background-color: #f6b83b;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.caja-form-tarjeta select{
+    border-color: #0A077D;
+    border-radius: 10px;
+}
+
+.caja-form-tarjeta select:hover{
+    background-color: #f6b83b;
+    opacity: 0.9;
+    transition: 0.5s;   
+}
+
+#conteiner-tarjetas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #388E8B, #daf5f4);
+}
+
+.tarjeta{
+    border: 2px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.texto{
+    font-family: var(--texto-principal);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.titulo-comentarios {
+    display: flex;
+    justify-content: center;
+    font-family: var(--texto-principal);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: underline;
+    text-shadow: 1px 0px 1px #f6b83b;
+}
 
 /* FORMULARIO */
-form {
+.contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
